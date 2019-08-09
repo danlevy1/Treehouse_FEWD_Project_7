@@ -1,0 +1,20 @@
+// **************************************
+// components/_daily-traffic-chart.scss
+// Common chart styles
+// **************************************
+
+.chart-header {
+    @include text(
+        $size: 0.8rem,
+        $weight: 400,
+        $color: $primary-text-color,
+        $line-height: null
+    );
+    text-transform: uppercase;
+    padding-left: 20px;
+    flex: 1;
+}
+
+.card-container {
+    padding: 20px;
+}

@@ -264,8 +264,43 @@ ALERT BANNER
   padding: 10px 0;
 }
 
+.chart-header {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #666666;
+  text-transform: uppercase;
+  padding-left: 20px;
+  flex: 1;
+}
+
+.card-container {
+  padding: 20px;
+}
+
 #traffic-container {
   grid-column: 1/-1;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+#traffic-header-container {
+  display: flex;
+  align-items: center;
+}
+#traffic-header-container ul {
+  display: flex;
+}
+#traffic-header-container ul li {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #8f8f8f;
+  padding: 5px 10px;
+}
+
+#traffic-selector-active {
+  color: #fff !important;
+  background-color: #81c98f;
+  border-radius: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */

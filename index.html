@@ -89,24 +89,52 @@
                     <img src="icons/icon-close-fa.svg" alt="Close Icon">
                 </section>
 
-                <section id="traffic-container">
-                    <h1>Traffic</h1>
+                <!-- Traffic Chart -->
+                <section id="traffic-container" class='card-container'>
+
+                    <!-- Traffic Header and Data Selector -->
+                    <div id="traffic-header-container">
+                        <h3 class="chart-header">Traffic</h3>
+                        <ul>
+                            <li>Hourly</li>
+                            <li>Daily</li>
+                            <li id="traffic-selector-active">Weekly</li>
+                            <li>Monthly</li>
+                        </ul>
+                    </div>
+
+                    <!-- Traffic Line Chart -->
                     <canvas id="traffic-chart"></canvas>
                 </section>
                     
-                <section id="daily-traffic-container"></section>
+                <!-- Daily Traffic Chart -->
+                <section id="daily-traffic-container" class='card-container'>
+                    <h3 class="chart-header">Daily Traffic</h3>
+                </section>
 
-                <section id="mobile-users-container"></section>
+                <section id="mobile-users-container" class='card-container'>
 
-                <section id="social-stats-container"></section>
+                </section>
 
-                <section id="new-members-container"></section>
+                <section id="social-stats-container" class='card-container'>
+                    
+                </section>
 
-                <section id="recent-activity-container"></section>
+                <section id="new-members-container" class='card-container'>
 
-                <section id="message-user-container"></section>
+                </section>
 
-                <section id="settings-container"></section>
+                <section id="recent-activity-container" class='card-container'>
+
+                </section>
+
+                <section id="message-user-container" class='card-container'>
+                    
+                </section>
+
+                <section id="settings-container" class='card-container'>
+
+                </section>
             </main>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>

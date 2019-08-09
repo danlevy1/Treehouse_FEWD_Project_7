@@ -1,6 +1,6 @@
-// Daily Traffic Line Chart
-const dailyTrafficLineChartCanvas = document.querySelector("#traffic-chart");
-const dailyTrafficLineChart = new Chart(dailyTrafficLineChartCanvas, {
+//Traffic Line Chart
+const trafficLineChartCanvas = document.querySelector("#traffic-chart");
+const trafficLineChart = new Chart(trafficLineChartCanvas, {
     type: "line",
     data: {
         labels: [
@@ -23,8 +23,9 @@ const dailyTrafficLineChart = new Chart(dailyTrafficLineChartCanvas, {
                 borderColor: "red",
                 borderWidth: 1,
                 borderColor: "rgba(116, 119, 191, 1)",
-                pointBorderWidth: 2,
+                pointBorderWidth: 1,
                 pointRadius: 5,
+                pointBackgroundColor: "rgba(255, 255, 255, 1)",
                 lineTension: 0,
                 data: [
                     750,
@@ -51,10 +52,7 @@ const dailyTrafficLineChart = new Chart(dailyTrafficLineChartCanvas, {
         },
         layout: {
             padding: {
-                top: 20,
-                right: 20,
-                bottom: 20,
-                left: 20
+                top: 20
             }
         },
         scales: {
