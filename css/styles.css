@@ -269,7 +269,6 @@ ALERT BANNER
   font-weight: 400;
   color: #666666;
   text-transform: uppercase;
-  padding-left: 20px;
   flex: 1;
 }
 
@@ -288,6 +287,7 @@ ALERT BANNER
 }
 #traffic-header-container ul {
   display: flex;
+  padding-right: 20px;
 }
 #traffic-header-container ul li {
   display: inline-block;
@@ -301,6 +301,15 @@ ALERT BANNER
   color: #fff !important;
   background-color: #81c98f;
   border-radius: 50px;
+}
+
+#daily-traffic-container {
+  border-bottom: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+}
+
+#mobile-users-container {
+  border-bottom: 1px solid #dfdfdf;
 }
 
 /*# sourceMappingURL=styles.css.map */

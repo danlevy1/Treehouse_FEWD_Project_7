@@ -1,4 +1,4 @@
-//Traffic Line Chart
+// Traffic Line Chart
 const trafficLineChartCanvas = document.querySelector("#traffic-chart");
 const trafficLineChart = new Chart(trafficLineChartCanvas, {
     type: "line",
@@ -20,7 +20,6 @@ const trafficLineChart = new Chart(trafficLineChartCanvas, {
             {
                 label: "Traffic",
                 backgroundColor: "rgba(116, 119, 191, 0.2)",
-                borderColor: "red",
                 borderWidth: 1,
                 borderColor: "rgba(116, 119, 191, 1)",
                 pointBorderWidth: 1,
@@ -60,17 +59,90 @@ const trafficLineChart = new Chart(trafficLineChartCanvas, {
                 {
                     ticks: {
                         beginAtZero: true,
-                        min: 0,
+                        min: 500,
                         max: 2500,
                         stepSize: 500
                     }
                 },
+            ]
+        }
+    }
+});
+
+// Daily traffic bar chart
+const dailyTrafficBarChartCanvas = document.querySelector("#daily-traffic-chart");
+const dailyTrafficBarChart = new Chart(dailyTrafficBarChartCanvas, {
+    type: "bar",
+    data: {
+        labels: ["S", "M", "T", "W", "T", "F", "S"],
+        datasets: [
+            {
+                label: "Daily Traffic",
+                backgroundColor: "rgba(116, 119, 191, 1)",
+                borderWidth: 1,
+                borderColor: "rgba(116, 119, 191, 1)",
+                pointBorderWidth: 1,
+                pointRadius: 5,
+                pointBackgroundColor: "rgba(255, 255, 255, 1)",
+                lineTension: 0,
+                data: [75, 100, 175, 125, 225, 200, 100]
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        legend: {
+            display: false
+        },
+        layout: {
+            padding: {
+                top: 20
+            }
+        },
+        scales: {
+            xAxes: [
                 {
-                    gridLines: {
-                        offsetGridLines: true
+                    barPercentage: 0.6
+                }
+            ],
+            yAxes: [
+                {
+                    ticks: {
+                        beginAtZero: true,
+                        min: 50,
+                        max: 250,
+                        stepSize: 50
                     }
                 }
             ]
         }
+    }
+});
+
+// Mobile users doughnut chart
+const mobileUsersDoughnutChartCanvas = document.querySelector("#mobile-users-chart");
+const mobileUsersDoughnutChart = new Chart(mobileUsersDoughnutChartCanvas, {
+    type: "doughnut",
+    data: {
+        labels: ["Phones", "Tablets", "Desktop"],
+        datasets: [
+            {
+                label: "Mobile Users",
+                data: [75, 25, 25],
+                backgroundColor: ['#7477bf', '#81c98f', '#74b1bf']
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        legend: {
+            position: 'right'
+        },
+        layout: {
+            padding: {
+                top: 20
+            }
+        },
+        rotation: 0.1 * Math.PI
     }
 });
