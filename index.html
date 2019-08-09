@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <div id="body-container">
+            <!-- HEADER -->
+            <header>
+                <!-- Site Name -->
+                <h1 id="site-name"><span>Your</span>App<sup>TM</sup></h1>
+
+                <!-- Alert Bell -->
+                <div id="alert-icon-container">
+                    <img id="alert-icon" src="icons/icon-bell.svg" alt="Alerts Icon" />
+                </div>
+
+                <!-- Current User Info -->
+                <div id="current-user-container">
+                    <img
+                        id="current-user-img"
+                        src="images/member-2.jpg"
+                        alt="Current User Profile Picture"
+                    />
+                    <h5 id="current-user-name">Josh Sullivan</h5>
+                </div>
+            </header>
+
+            <!-- PRIMARY NAVIGATION SIDE BAR -->
+            <section id="primary-nav">
+                <!-- Dashboard Button -->
+                <div class="primary-nav-img-container">
+                    <div id="primary-nav-selected-border"></div>
+                    <img
+                        src="icons/icon-dashboard.svg"
+                        alt="Dashboard Navigation Button"
+                    />
+                </div>
+
+                <!-- Members Button -->
+                <div class="primary-nav-img-container">
+                    <img src="icons/icon-members.svg" alt="Members Navigation Button" />
+                </div>
+
+                <!-- Visits Button -->
+                <div class="primary-nav-img-container">
+                    <img src="icons/icon-visits.svg" alt="Visits Navigation Button" />
+                </div>
+
+                <!-- Settings Button -->
+                <div class="primary-nav-img-container">
+                    <img src="icons/icon-settings.svg" alt="Settings Navigation Button" />
+                </div>
+            </section>
+
+            <!-- DASHBOARD -->
+            <main>
+                <!-- Secondary Navigation -->
+                <section id="secondary-nav-container">
+                    <!-- Dashboard Tab -->
+                    <div id="secondary-nav-tab">
+                        <h2 id="secondary-nav-tab-text">Dashboard</h2>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div id="search-bar-container">
+                        <label for="dashboard-search">Search</label>
+                        <input
+                            type="text"
+                            name="dashboard-search"
+                            id="dashboard-search"
+                            placeholder="Search"
+                        />
+                        <img
+                            id="search-bar-icon"
+                            src="icons/icon-search-fa.svg"
+                            alt="Search Icon"
+                        />
+                    </div>
+                </section>
+
+                <!-- Alert Banner -->
+                <section id="alert-banner-container">
+                    <p id="alert-banner-message"><span id="alert-banner-title">Alert</span>This is a test alert.</p>
+                    <img src="icons/icon-close-fa.svg" alt="Close Icon">
+                </section>
+
+                <section id="traffic-container">
+                    <h1>Traffic</h1>
+                    <canvas id="traffic-chart"></canvas>
+                </section>
+                    
+                <section id="daily-traffic-container"></section>
+
+                <section id="mobile-users-container"></section>
+
+                <section id="social-stats-container"></section>
+
+                <section id="new-members-container"></section>
+
+                <section id="recent-activity-container"></section>
+
+                <section id="message-user-container"></section>
+
+                <section id="settings-container"></section>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

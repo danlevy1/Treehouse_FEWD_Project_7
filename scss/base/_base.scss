@@ -1,0 +1,28 @@
+// **************************************
+// components/_header.scss
+// Base styles
+// **************************************
+
+#body-container {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-areas:
+        "header header"
+        "main-nav main-content"
+}
+
+header {
+    grid-area: header;
+}
+
+#main-nav {
+    grid-area: main-nav;
+}
+
+main {
+    grid-area: main-content;
+}
+
+label {
+    display: none;
+}

@@ -1,0 +1,19 @@
+// **************************************
+// utilities/_mixins.scss
+// Project mixins
+// **************************************
+
+// Formats text
+@mixin text($size, $weight, $color, $line-height) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $line-height;
+}
+
+// Media query
+@mixin media-query($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}

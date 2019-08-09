@@ -1,0 +1,36 @@
+// **************************************
+// components/_main-nav.scss
+// Main navigation styles
+// **************************************
+
+#primary-nav {
+    width: 50px;
+    min-height: 100vh;
+    background-color: $primary-nav-color;
+
+    // #primary-nav-selected-border
+    &-selected-border {
+        position: absolute;
+        height: 40px;
+        width: 2px;
+        left: 0;
+        background-color: $secondary-color;
+        border-radius: 0 6px 6px 0;
+    }
+}
+
+.primary-nav-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    position: relative;
+
+    // .primary-nav-img-container img
+    img {
+        height: 40px;
+        width: auto;
+        padding: 10px 0;
+    }
+}
