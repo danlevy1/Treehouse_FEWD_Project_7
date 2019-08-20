@@ -1,0 +1,48 @@
+// **************************************
+// components/_new-members-list.scss
+// New members list styles
+// **************************************
+
+#new-members-container {
+    @extend %half-width-grid-item-left;
+}
+
+.new-member {
+    @include flex-container($justify-content: null, $align-items: center);
+    border-bottom: 1px solid $secondary-border-color;
+    padding: 20px 0;
+
+    // .new-member:last-child
+    &:last-child {
+        border: none;
+        padding-bottom: 0;
+    }
+
+    // .new-member-profile-picture
+    &-profile-picture {
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    // .new-member-info
+    &-info {
+        padding-left: 10px;
+        flex: 1;
+    }
+
+    // .new-member-name
+    &-name {
+        @include text($size: .9rem, $weight: 400, $color: $primary-text-color, $line-height: null);
+        padding-bottom: 5px;
+    }
+
+    // .new-member-email
+    &-email {
+        @include text($size: .8rem, $weight: 300, $color: $primary-color, $line-height: null);
+    }
+
+    // .new-member-sign-up-date
+    &-sign-up-date {
+        @include text($size: .8rem, $weight: 300, $color: $primary-text-color, $line-height: null);
+    }
+}

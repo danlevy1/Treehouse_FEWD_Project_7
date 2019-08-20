@@ -4,6 +4,5 @@
 // **************************************
 
 #daily-traffic-container {
-    border-bottom: 1px solid $primary-border-color;
-    border-right: 1px solid $primary-border-color;
+    @extend %half-width-grid-item-left;
 }

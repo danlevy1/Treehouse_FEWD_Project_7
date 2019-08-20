@@ -1,3 +1,7 @@
+// Global Variables
+let primaryButtonColor = '#7477bf';
+let secondaryButtonColor = '#b2b2b2';
+
 // Traffic Line Chart
 const trafficLineChartCanvas = document.querySelector("#traffic-chart");
 const trafficLineChart = new Chart(trafficLineChartCanvas, {
@@ -144,5 +148,42 @@ const mobileUsersDoughnutChart = new Chart(mobileUsersDoughnutChartCanvas, {
             }
         },
         rotation: 0.1 * Math.PI
+    }
+});
+
+
+// On-Off Switch
+const onOffSwitches = document.querySelectorAll('.on-off-switch');
+const onOffSwitchCheckboxes = document.querySelectorAll('.on-off-switch-checkbox');
+const onOffSwitchTextOn = document.querySelectorAll('.on-off-switch-text-on');
+const onOffSwitchTextOff = document.querySelectorAll('.on-off-switch-text-off');
+
+for (let i = 0; i < onOffSwitchCheckboxes.length; i ++) {
+    onOffSwitchCheckboxes[i].addEventListener('click', () => {
+        onOffSwitchChanged(onOffSwitches[i], onOffSwitchCheckboxes[i], onOffSwitchTextOn[i], onOffSwitchTextOff[i])
+    });
+}
+
+function onOffSwitchChanged(onOffSwitch, checkbox, onText, offText) {
+    if (checkbox.checked) {
+        onOffSwitch.style.backgroundColor = primaryButtonColor;
+        onText.style.display = 'block';
+        offText.style.display = 'none';
+    } else {
+        onOffSwitch.style.backgroundColor = secondaryButtonColor;
+        onText.style.display = 'none';
+        offText.style.display = 'block';
+    }
+}
+
+
+// Timezone select menu
+const timezoneSelectMenu = document.querySelector('#timezone-select');
+timezoneSelectMenu.addEventListener('change', () => {
+    const selectedOption = timezoneSelectMenu.options[timezoneSelectMenu.selectedIndex];
+    if (selectedOption.disabled) {
+        timezoneSelectMenu.style.color = '#bababa';
+    } else {
+        timezoneSelectMenu.style.color = '#666666';
     }
 });

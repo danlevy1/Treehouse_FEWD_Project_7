@@ -1,0 +1,47 @@
+// **************************************
+// utilities/_placeholders.scss
+// Project placeholders
+// **************************************
+
+// Bottom border for grid elements
+%grid-item-bottom-border {
+    border-bottom: 1px solid $primary-border-color;
+}
+
+// Full width grid items
+%full-width-grid-item {
+    grid-column: 1 / -1;
+    @extend %grid-item-bottom-border;
+}
+
+// Half width grid items (left side)
+%half-width-grid-item-left {
+    @extend %grid-item-bottom-border;
+    border-right: 1px solid $primary-border-color;
+}
+
+// Half width grid items (right side)
+%half-width-grid-item-right {
+    @extend %grid-item-bottom-border;
+}
+
+// Inputs
+%input {
+    border: 1px solid $primary-border-color;
+    border-radius: 6px;
+    padding-left: 10px;
+    @include text($size: .8rem, $weight: 400, $color: $primary-text-color, $line-height: null);
+}
+
+%text-input-placeholder-text {
+    font-weight: 300;
+    color: $input-placeholder-text-color;
+}
+
+// Buttons
+%button {
+    height: 40px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 6px;
+}

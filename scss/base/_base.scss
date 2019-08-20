@@ -3,12 +3,31 @@
 // Base styles
 // **************************************
 
+body {
+    font-family: $primary-font-stack;
+}
+
 #body-container {
     display: grid;
-    grid-template-columns: 50px auto;
+    grid-template-columns: 100%;
     grid-template-areas:
-        "header header"
-        "main-nav main-content"
+        "header"
+        "main-nav"
+        "main-content";
+
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 50px auto;
+        grid-template-areas:
+            "header header"
+            "main-nav main-content";
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        grid-template-columns: 50px auto;
+        grid-template-areas:
+            "header header"
+            "main-nav main-content";
+    }
 }
 
 header {
@@ -23,6 +42,6 @@ main {
     grid-area: main-content;
 }
 
-label {
+.hide {
     display: none;
 }

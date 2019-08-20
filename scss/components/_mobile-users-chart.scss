@@ -4,5 +4,5 @@
 // **************************************
 
 #mobile-users-container {
-    border-bottom: 1px solid $primary-border-color;
+    @extend %half-width-grid-item-right;
 }

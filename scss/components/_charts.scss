@@ -4,16 +4,25 @@
 // **************************************
 
 .chart-header {
+    width: 100%;
     @include text(
-        $size: 0.8rem,
+        $size: 1.1rem,
         $weight: 400,
         $color: $primary-text-color,
         $line-height: null
     );
     text-transform: uppercase;
     flex: 1;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        font-size: .8rem;
+    }
 }
 
 .card-container {
     padding: 20px;
+}
+
+.chart-container {
+    position: relative;
 }

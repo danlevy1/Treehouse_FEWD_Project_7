@@ -1,0 +1,48 @@
+// **************************************
+// components/_recent-activity-list.scss
+// Recent activity list styles
+// **************************************
+
+#recent-activity-container {
+    @extend %half-width-grid-item-right;
+}
+
+.recent-activity {
+    @include flex-container($justify-content: null, $align-items: center);
+    border-bottom: 1px solid $secondary-border-color;
+    padding: 20px 0;
+
+    // .recent-activity:last-child
+    &:last-child {
+        border: none;
+        padding-bottom: 0;
+    }
+
+    // .recent-activity-info
+    &-info {
+        padding: 0 10px;
+        flex: 1;
+    }
+
+    // .recent-activity-description
+    &-description {
+        @include text($size: .8rem, $weight: 300, $color: $primary-text-color, $line-height: 1rem);
+        padding-bottom: 5px;
+    }
+
+    // .recent-activity-time
+    &-time {
+        @include text($size: .7rem, $weight: 300, $color: $primary-text-color, $line-height: null);
+    }
+
+    // .recent-activity-right-arrow-icon
+    &-right-arrow-icon {
+        height: 20px;
+        width: auto;
+    }
+}
+
+.member-profile-picture {
+    height: 40px;
+    border-radius: 50%;
+}

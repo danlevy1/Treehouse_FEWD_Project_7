@@ -3,3 +3,72 @@
 // Secondary navigation styles
 // **************************************
 
+#secondary-nav-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-nav-color;
+    grid-column: 1 / -1;
+    padding: 20px 0;
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        flex-direction: row;
+        height: 50px;
+        padding: 0;
+    }
+}
+
+#secondary-nav-tab {
+    @include flex-container($justify-content: center, $align-items: center);
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        background-color: $white-color;
+    }
+
+    // #secondary-nav-tab-text
+    &-text {
+        @include text($size: 1rem, $weight: 400, $color: $dashboard-tab-text-color, $line-height: null);
+        padding-bottom: 20px;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            padding: 0 20px;
+        }
+    }
+}
+
+#search-bar-container {
+    @include flex-container($justify-content: center, $align-items: center);
+    flex: 1;
+    position: relative;
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        justify-content: flex-end;
+        border-left: 1px solid $primary-border-color;
+        border-bottom: 1px solid $primary-border-color;
+        padding-top: 0;
+    }
+}
+
+#dashboard-search {
+    @extend %input;
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        width: 250px;
+        margin-left: 0;
+    }
+
+    // #dashboard-search::placeholder
+    &::placeholder {
+        @extend %text-input-placeholder-text;
+    }
+}
+
+#search-bar-icon {
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}

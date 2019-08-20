@@ -1,0 +1,70 @@
+// **************************************
+// components/_social-cards.scss
+// Social card styles
+// **************************************
+
+#social-stats-container {
+    @extend %full-width-grid-item;
+}
+
+#social-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 20px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.social-card {
+    background-color: $social-card-background-color;
+    border: 1px solid $social-card-border-color;
+    border-radius: 6px;
+    height: 80px;
+    @include flex-container($justify-content: null, $align-items: center);
+    padding-left: 20px;
+
+    // .social-card-logo-container
+    &-logo-container {
+        width: 50px;
+        height: 50px;
+        background-color: $primary-color;
+        @include flex-container($justify-content: center, $align-items: center);
+        border-radius: 50%;
+    }
+
+    // .social-card-info-container
+    &-info-container {
+        padding-left: 20px;
+    }
+
+    // .social-card-name
+    &-name {
+        @include text($size: .9rem, $weight: 500, $color: $primary-color, $line-height: null);
+        padding-bottom: 5px;
+    }
+
+    // .social-card-engagements
+    &-engagements {
+        @include text($size: 2rem, $weight: 100, $color: $primary-text-color, $line-height: null);
+    }
+}
+
+.social-logo {
+    fill: $white-color;
+}
+
+#twitter-logo {
+    width: 50%;
+    padding-top: 5px;
+}
+
+#facebook-logo {
+    width: 60%;
+}
+
+#google-plus-logo {
+    width: 45%;
+}

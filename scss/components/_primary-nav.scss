@@ -4,26 +4,36 @@
 // **************************************
 
 #primary-nav {
-    width: 50px;
-    min-height: 100vh;
+    // width: 50px;
     background-color: $primary-nav-color;
+    display: flex;
+    justify-content: center;
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 
     // #primary-nav-selected-border
     &-selected-border {
         position: absolute;
-        height: 40px;
-        width: 2px;
-        left: 0;
+        height: 2px;
+        width: 40px;
+        bottom: 0;
         background-color: $secondary-color;
         border-radius: 0 6px 6px 0;
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            height: 40px;
+            width: 2px;
+            left: 0;
+        }
     }
 }
 
 .primary-nav-img-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50px;
+    @include flex-container($justify-content: center, $align-items: center);
+    flex-direction: row;
     margin: 15px 0;
     position: relative;
 

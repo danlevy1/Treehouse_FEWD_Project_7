@@ -1,0 +1,48 @@
+// **************************************
+// components/_message-user.scss
+// Message user styles
+// **************************************
+
+#message-user {
+    // #message-user-container
+    &-container {
+        border-right: 1px solid $primary-border-color;
+    }
+
+    // #message-user-search
+    &-search {
+        @extend %input;
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+        background-color: $input-background-color;
+
+        // #message-user-search::placeholder
+        &::placeholder {
+            @extend %text-input-placeholder-text;
+        }
+    }
+
+    // #message-user-message
+    &-message {
+        @extend %input;
+        width: 100%;
+        resize: none;
+        margin-top: 10px;
+        padding-top: 10px;
+        background-color: $input-background-color;
+
+        // #message-user-message::placeholder
+        &::placeholder {
+            @extend %text-input-placeholder-text;
+        }
+    }
+
+    // #message-user-submit-btn
+    &-submit-btn {
+        @extend %button;
+        width: 100%;
+        background-color: $primary-button-color;
+        margin-top: 7px;
+    }
+}
