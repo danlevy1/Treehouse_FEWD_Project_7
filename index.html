@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css"
+        />
         <title>Dashboard</title>
     </head>
     <body>
@@ -89,7 +93,11 @@
                     <p id="alert-banner-message">
                         <span id="alert-banner-title">Alert</span>This is a test alert.
                     </p>
-                    <img src="icons/icon-close-fa.svg" alt="Close Icon" />
+                    <img
+                        src="icons/icon-close-fa.svg"
+                        alt="Close Button"
+                        id="alert-banner-close-btn"
+                    />
                 </section>
 
                 <!-- Traffic Chart -->
@@ -109,7 +117,6 @@
                     <div class="chart-container">
                         <canvas id="traffic-chart"></canvas>
                     </div>
-                    
                 </section>
 
                 <!-- Daily Traffic Chart -->
@@ -432,20 +439,33 @@
 
                     <!-- Settings Swtiches Container -->
                     <div class="on-off-switch-container">
-
                         <!-- Send Email Notifications Option -->
-                        <label for="on-off-switch-checkbox" class="on-off-switch-label">Send Email Notifications</label>
+                        <label for="on-off-switch-checkbox" class="on-off-switch-label"
+                            >Send Email Notifications</label
+                        >
                         <div class="on-off-switch">
-                            <input type="checkbox" name="on-off-switch-checkbox" class="on-off-switch-checkbox" checked>
+                            <input
+                                type="checkbox"
+                                name="on-off-switch-checkbox"
+                                class="on-off-switch-checkbox"
+                                checked
+                            />
                             <span class="on-off-switch-switch"></span>
                             <h4 class="on-off-switch-text on-off-switch-text-on">ON</h4>
                             <h4 class="on-off-switch-text on-off-switch-text-off">OFF</h4>
                         </div>
 
                         <!-- Set Profile to Public Option -->
-                        <label for="on-off-switch-checkbox" class="on-off-switch-label">Set Profile to Public</label>
+                        <label for="on-off-switch-checkbox" class="on-off-switch-label"
+                            >Set Profile to Public</label
+                        >
                         <div class="on-off-switch">
-                            <input type="checkbox" name="on-off-switch-checkbox" class="on-off-switch-checkbox" checked>
+                            <input
+                                type="checkbox"
+                                name="on-off-switch-checkbox"
+                                class="on-off-switch-checkbox"
+                                checked
+                            />
                             <span class="on-off-switch-switch"></span>
                             <h4 class="on-off-switch-text on-off-switch-text-on">ON</h4>
                             <h4 class="on-off-switch-text on-off-switch-text-off">OFF</h4>
@@ -456,7 +476,9 @@
                     <div class="select-container">
                         <label for="timezone-select" class="hide">Select Timezone</label>
                         <select name="timezone-select" id="timezone-select">
-                            <option value="select" selected disabled>Select Timezone</option>
+                            <option value="select" selected disabled
+                                >Select Timezone</option
+                            >
                             <option value="est">EST</option>
                             <option value="cst">CST</option>
                             <option value="mst">MST</option>
@@ -464,15 +486,21 @@
                         </select>
 
                         <!-- Dropdown Arrow -->
-                        <img src="icons/icon-down-arrow-fa.svg" alt="Down Arrow" class="select-down-arrow">
+                        <img
+                            src="icons/icon-down-arrow-fa.svg"
+                            alt="Down Arrow"
+                            class="select-down-arrow"
+                        />
                     </div>
 
                     <!-- Option Buttons -->
                     <div id="settings-option-btns">
                         <button type="button" id="settings-option-btns-save">Save</button>
-                        <button type="button" id="settings-option-btns-cancel">Cancel</button>
+                        <button type="button" id="settings-option-btns-cancel">
+                            Cancel
+                        </button>
                     </div>
-                    
+                </section>
             </main>
         </div>
         <script

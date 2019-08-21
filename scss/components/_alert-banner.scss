@@ -19,6 +19,21 @@
     }
 }
 
+// TODO: Get this to work from index.js
+@keyframes alert-banner-close {
+    0% {
+        height: 36px;
+    }
+    50% {
+        height: 0;
+        margin: 20px;
+    }
+    100% {
+        height: 0;
+        margin: 0;
+    }
+}
+
 #alert-banner {
 
     // #alert-banner-title

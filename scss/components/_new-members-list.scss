@@ -26,23 +26,23 @@
 
     // .new-member-info
     &-info {
-        padding-left: 10px;
+        padding: 0 5px 0 10px;
         flex: 1;
     }
 
     // .new-member-name
     &-name {
-        @include text($size: .9rem, $weight: 400, $color: $primary-text-color, $line-height: null);
+        @include text($size: .8rem, $weight: 400, $color: $primary-text-color, $line-height: null);
         padding-bottom: 5px;
     }
 
     // .new-member-email
     &-email {
-        @include text($size: .8rem, $weight: 300, $color: $primary-color, $line-height: null);
+        @include text($size: .7rem, $weight: 300, $color: $primary-color, $line-height: null);
     }
 
     // .new-member-sign-up-date
     &-sign-up-date {
-        @include text($size: .8rem, $weight: 300, $color: $primary-text-color, $line-height: null);
+        @include text($size: .7rem, $weight: 300, $color: $primary-text-color, $line-height: null);
     }
 }

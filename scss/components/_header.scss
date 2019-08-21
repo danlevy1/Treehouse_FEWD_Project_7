@@ -44,6 +44,14 @@ header {
     height: 20px;
     width: auto;
 
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        height: 60%;
+    }
+
+    &:hover {
+        animation: alert-bell-shake .5s forwards;
+    }
+
     // #alert-icon-container
     &-container {
         height: 40%;
@@ -56,9 +64,26 @@ header {
             height: 60%;
         }
     }
+}
 
-    @include media-query($breakpoint: $tablet-breakpoint) {
-        height: 60%;
+@keyframes alert-bell-shake {
+    10% {
+        transform: rotate(20deg);
+    }
+    30% {
+        transform: rotate(-40deg);
+    }
+    50% {
+        transform: rotate(40deg);
+    }
+    70% {
+        transform: rotate(-40deg);
+    }
+    90% {
+        transform: rotate(40deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 

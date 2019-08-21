@@ -1,0 +1,49 @@
+// **************************************
+// components/_alert.scss
+// Alert styles
+// **************************************
+
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50vw;
+    transform: translateX(-50%);
+    width: 80vw;
+    max-width: 700px;
+    max-height: 100px;
+    border-radius: 6px;
+
+    // .alert-success
+    &-success {
+        background-color: #5bd44e;
+    }
+
+    // .alert-error
+    &-error {
+        background-color: #e65151;
+    }
+
+    // .alert-title
+    &-title {
+        padding: 10px 35px 0 0;
+        @include text($size: 1.1rem, $weight: 500, $color: $white-color, $line-height: null);
+        text-align: center;
+    }
+
+    // .alert-message
+    &-message {
+        padding: 5px 35px 5px 10px;
+        @include text($size: .8rem, $weight: 300, $color: $white-color, $line-height: 1rem);
+        text-align: center;
+    }
+
+    // .alert-close-btn
+    &-close-btn {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: auto;
+        height: 20px;
+    }
+}

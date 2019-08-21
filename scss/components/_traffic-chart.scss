@@ -19,6 +19,7 @@
     // #traffic-header-container ul
     ul {
         display: flex;
+        flex-wrap: wrap;
         padding-top: 20px;
         padding-right: 20px;
 
@@ -30,7 +31,7 @@
         li {
             display: inline-block;
             @include text(
-                $size: 1rem,
+                $size: .8rem,
                 $weight: 500,
                 $color: $line-chart-tab-inactive-text-color,
                 $line-height: null

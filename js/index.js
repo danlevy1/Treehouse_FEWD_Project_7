@@ -49,7 +49,7 @@ const trafficLineChart = new Chart(trafficLineChartCanvas, {
     },
     options: {
         responsive: true,
-        aspectRatio: 3,
+        // aspectRatio: 3,
         legend: {
             display: false
         },
@@ -187,3 +187,56 @@ timezoneSelectMenu.addEventListener('change', () => {
         timezoneSelectMenu.style.color = '#666666';
     }
 });
+
+
+// Alert Banner
+const alertBanner = document.querySelector('#alert-banner-container');
+const alertBannerCloseButton = document.querySelector('#alert-banner-close-btn');
+alertBannerCloseButton.addEventListener('click', () => {
+    alertBanner.parentElement.removeChild(alertBanner);
+    // alertBanner.style.animation = 'alert-banner-open .5s ease-out forwards';
+});
+
+
+// Message Alerts
+const messageSendButton = document.querySelector('#message-user-submit-btn');
+messageSendButton.addEventListener('click', checkMessage);
+
+function checkMessage() {
+    const userField = document.querySelector('#message-user-search');
+    const messageField = document.querySelector('#message-user-message');
+    if (userField.value.length === 0) {
+        displayAlert('error', 'No User Selected', 'Please enter a user whom you whish to message.')
+    } else if (messageField.value.length === 0) {
+        displayAlert('error', 'No Message Entered', 'Please enter a message to send.')
+    } else {
+        displayAlert('success', 'Success', 'Your message has been sent.');
+    }
+}
+
+function displayAlert(type, title, message) {
+    const bodyElement = document.querySelector('body');
+    const alertContainer = document.createElement('div');
+    alertContainer.classList = 'alert alert-' + type;
+
+    const alertTitle = document.createElement('h2');
+    alertTitle.className = 'alert-title';
+    alertTitle.textContent = title;
+    alertContainer.appendChild(alertTitle);
+
+    const alertMessage = document.createElement('p');
+    alertMessage.className = 'alert-message';
+    alertMessage.textContent = message;
+    alertContainer.appendChild(alertMessage);
+
+    const closeButton = document.createElement('img');
+    closeButton.className = 'alert-close-btn';
+    closeButton.src = 'icons/icon-close-fa.svg';
+    closeButton.alt = "Close Button"
+    closeButton.addEventListener('click', () => {
+        bodyElement.removeChild(alertContainer);
+    });
+    alertContainer.appendChild(closeButton);
+
+    bodyElement.appendChild(alertContainer);
+}
