@@ -21,7 +21,8 @@
 
                 <!-- Alert Bell -->
                 <div id="alert-icon-container">
-                    <img id="alert-icon" src="icons/icon-bell.svg" alt="Alerts Icon" />
+                    <img id="alert-icon" src="icons/icon-bell.svg" alt="Alerts Bell" />
+                    <div id="alert-icon-notify"></div>
                 </div>
 
                 <!-- Current User Info -->
@@ -105,7 +106,7 @@
                     <!-- Traffic Header and Data Selector -->
                     <div id="traffic-header-container">
                         <h3 class="chart-header">Traffic</h3>
-                        <ul>
+                        <ul id="traffic-time-selection">
                             <li>Hourly</li>
                             <li>Daily</li>
                             <li id="traffic-selector-active">Weekly</li>
@@ -152,13 +153,12 @@
                         <div class="social-card">
                             <!-- Twitter Logo -->
                             <div class="social-card-logo-container">
-                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- <?xml version="1.0" encoding="utf-8"?> -->
                                 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                 <svg
                                     id="twitter-logo"
                                     class="social-logo"
                                     version="1.1"
-                                    id="Layer_1"
                                     xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
                                     x="0px"
@@ -188,13 +188,12 @@
                         <div class="social-card">
                             <!-- Facebook Logo -->
                             <div class="social-card-logo-container">
-                                <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                                <!-- <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'> -->
                                 <svg
                                     id="facebook-logo"
                                     class="social-logo"
                                     enable-background="new 0 0 56.693 56.693"
                                     height="56.693px"
-                                    id="Layer_1"
                                     version="1.1"
                                     viewBox="0 0 56.693 56.693"
                                     width="56.693px"
@@ -219,7 +218,7 @@
                         <div class="social-card">
                             <!-- Google+ Logo -->
                             <div class="social-card-logo-container">
-                                <?xml version="1.0" encoding="UTF-8"?>
+                                <!-- <?xml version="1.0" encoding="UTF-8"?> -->
                                 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                 <svg
                                     id="google-plus-logo"
@@ -227,7 +226,6 @@
                                     xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
                                     version="1.1"
-                                    id="Layer_1"
                                     x="0px"
                                     y="0px"
                                     viewBox="0 0 32 32"
@@ -412,12 +410,19 @@
 
                     <!-- User Search -->
                     <label for="message-user-search" class="hide">Search for User</label>
-                    <input
-                        type="text"
-                        name="message-user-search"
-                        id="message-user-search"
-                        placeholder="Search Users"
-                    />
+                    <input list="user-list" name="message-user-search" id="message-user-search" placeholder="Search Users">
+                    <datalist id="user-list">
+                        <option value="Kiersten Olson"></option>
+                        <option value="Trinity Giles"></option>
+                        <option value="Brenda Padilla"></option>
+                        <option value="Kendall Shaw"></option>
+                        <option value="Leah Ashley"></option>
+                        <option value="Giovani Kemp"></option>
+                        <option value="Kinley Vang"></option>
+                        <option value="Belinda Cordova"></option>
+                        <option value="Chelsea Bullock"></option>
+                        <option value="Jace Morgan"></option>
+                    </datalist>
 
                     <!-- Message -->
                     <label for="message-user-message" class="hide">Message</label>
@@ -441,12 +446,12 @@
                     <div class="on-off-switch-container">
                         <!-- Send Email Notifications Option -->
                         <label for="on-off-switch-checkbox" class="on-off-switch-label"
-                            >Send Email Notifications</label
-                        >
+                            >Send Email Notifications</label>
                         <div class="on-off-switch">
                             <input
                                 type="checkbox"
                                 name="on-off-switch-checkbox"
+                                id="send-email-notif-checkbox"
                                 class="on-off-switch-checkbox"
                                 checked
                             />
@@ -463,6 +468,7 @@
                             <input
                                 type="checkbox"
                                 name="on-off-switch-checkbox"
+                                id="set-profile-public-checkbox"
                                 class="on-off-switch-checkbox"
                                 checked
                             />

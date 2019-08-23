@@ -6,7 +6,11 @@
 #message-user {
     // #message-user-container
     &-container {
-        border-right: 1px solid $primary-border-color;
+        border-bottom: 1px solid $primary-border-color;
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            border-bottom: none;
+            border-right: 1px solid $primary-border-color;
+        }
     }
 
     // #message-user-search

@@ -54,6 +54,7 @@ header {
 
     // #alert-icon-container
     &-container {
+        position: relative;
         height: 40%;
         border-right: 2px solid $header-division-line-color;
         padding-right: 20px;
@@ -62,6 +63,22 @@ header {
 
         @include media-query($breakpoint: $tablet-breakpoint) {
             height: 60%;
+        }
+    }
+
+    // #alert-icon-notify
+    &-notify {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 0;
+        right: 20px;
+        background-color: $secondary-color;
+        border-radius: 50%;
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            top: 2px;
+            right: 20px;
         }
     }
 }

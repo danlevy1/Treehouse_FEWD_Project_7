@@ -30,6 +30,7 @@
         // #traffic-header-container ul li
         li {
             display: inline-block;
+            cursor: pointer;
             @include text(
                 $size: .8rem,
                 $weight: 500,
@@ -41,14 +42,6 @@
             @include media-query($breakpoint: $tablet-breakpoint) {
                 font-size: .7rem;
             }
-
-            // &:first-child {
-            //     padding-left: 0;
-            // }
-
-            // &:last-child {
-            //     padding-right: 0;
-            // }
         }
     }
 }

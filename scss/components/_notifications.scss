@@ -1,0 +1,52 @@
+// **************************************
+// components/_notifications.scss
+// Notifications styles
+// **************************************
+
+#notifications {
+    position: fixed;
+    width: 90%;
+    max-height: 70%;
+    top: 80px;
+    right: 50%;
+    transform: translateX(50%);
+    overflow: scroll;
+    background-color: $secondary-color;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    // transition: opacity .5s;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        width: 300px;
+        max-height: 500px;
+        right: 0;
+        transform: translateX(-32%);
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        top: 60px;
+        right: 20px;
+        transform: translateX(-50%);
+    }
+}
+
+.notification {
+    padding: 20px;
+    border-bottom: 1px solid $white-color;
+
+    // .notification:last-child
+    &:last-child {
+        border-bottom: none;
+    }
+
+    // .notification-title
+    &-title {
+        @include text($size: 1rem, $weight: 500, $color: $white-color, $line-height: null);
+        padding-bottom: 5px;
+    }
+
+    // .notification-message
+    &-message {
+        @include text($size: .8rem, $weight: 300, $color: $white-color, $line-height: 1rem);
+    }
+}

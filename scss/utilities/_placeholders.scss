@@ -17,7 +17,9 @@
 // Half width grid items (left side)
 %half-width-grid-item-left {
     @extend %grid-item-bottom-border;
-    border-right: 1px solid $primary-border-color;
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        border-right: 1px solid $primary-border-color;
+    }
 }
 
 // Half width grid items (right side)
